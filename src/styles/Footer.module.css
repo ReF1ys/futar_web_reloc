@@ -1,0 +1,135 @@
+.footer {
+    background-color: #1b1b1b;
+    color: #fef9f3;
+    padding: 2rem 1rem;
+    font-family: Poppins, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Каждая колонка будет равномерно занимать пространство, но не меньше 300px */
+  .contacts,
+  .nav,
+  .social {
+    flex: 1 1 0;
+    min-width: 300px;
+  }
+  
+  /* Блок контактов */
+  .contacts h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f6c64c;
+  }
+  
+  .contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contacts li {
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .contacts li:hover {
+    transform: translateX(5px);
+  }
+  
+  .contacts span {
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+  
+  .contacts a {
+    color: #fef9f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contacts a:hover {
+    color: #f6a76c;
+  }
+  
+  /* Блок навигации */
+  .nav h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f6c64c;
+  }
+  
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li {
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav li:hover {
+    transform: translateX(5px);
+  }
+  
+  .nav a {
+    color: #fef9f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #f6a76c;
+  }
+  
+  /* Блок социальных сетей */
+  .social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f6c64c;
+  }
+  
+  .social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social li {
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .social li:hover {
+    transform: translateX(5px);
+  }
+  
+  .social a {
+    color: #fef9f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social a:hover {
+    color: #f6a76c;
+  }
+  
+  /* Нижняя часть футера */
+  .bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    color: #aaa;
+  }
+  

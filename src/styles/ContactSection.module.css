@@ -1,0 +1,195 @@
+.contactSection {
+    padding: 3rem 1rem;
+    background-color: #fdfcf9;
+     /* Фон всей секции (если нужен) */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Заголовки секции */
+  .title {
+    font-size: 2rem;
+    color: #1A2942;
+    margin-bottom: 0.75rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    color: #1A2942;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    line-height: 1.5;
+  }
+  
+  /* Обёртка вокруг формы */
+  .formWrapper {
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: inset -1px -1px 2px 0 rgba(210, 206, 193, 0.5), inset 1px 1px 2px 0 rgba(255, 255, 255, 0.3), 5px 5px 13px 0 rgba(210, 206, 193, 0.9), -5px -5px 10px 0 rgba(255, 255, 255, 0.9), 5px -5px 10px 0 rgba(210, 206, 193, 0.2), -5px 5px 10px 0 rgba(210, 206, 193, 0.2);
+    background: #f5efe0;
+  }
+  
+  /* Заголовок внутри формы */
+  .formTitle {
+    color: #1A2942;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  
+  /* Сама форма */
+  .requestForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Сетка для полей (Name, Email, Phone, Company, Message) */
+  .formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "name   email  message message"
+      "phone  company message message";
+    gap: 1rem;
+  }
+  
+  /* Обычные поля (Name, Email, Phone, Company) */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Распределяем, чтобы соответствовать grid-areas */
+  .formGroup:nth-child(1) { grid-area: name; }
+  .formGroup:nth-child(2) { grid-area: email; }
+  .formGroup:nth-child(3) { grid-area: phone; }
+  .formGroup:nth-child(4) { grid-area: company; }
+  
+  /* Широкое поле для "Message" (занимает две строки в правом столбце) */
+  .formGroupWide {
+    display: flex;
+    flex-direction: column;
+    grid-area: message;
+  }
+  
+  /* Подписи к полям */
+  .formGroup label,
+  .formGroupWide label {
+    color: #1A2942;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+    font-size: 20px
+  }
+  
+  /* Поля ввода (input, textarea) */
+  .formGroup input,
+  .formGroupWide textarea {
+    border: 2px solid #D5B03C; /* Золотистая рамка */
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    color: #333;
+    background: #fdfcf9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none; /* чтобы текстовое поле не растягивалось вручную */
+  }
+  
+  /* Hover / Focus на полях */
+  .formGroup input:hover,
+  .formGroupWide textarea:hover {
+    border-color: #e0ac3d;
+  }
+  .formGroup input:focus,
+  .formGroupWide textarea:focus {
+    outline: none;
+    border-color: #e0ac3d;
+    box-shadow: 0 0 1px 0 #d9b99e, 0 0 2px 0 #d9b99e, 0 0 6px 0 #d9b99e, 0 0 11px 0 #d9b99e, 0 0 20px 0 #d9b99e, 0 0 34px 0 #d9b99e;
+ 
+  }
+  
+  /* Чекбокс и подпись */
+  .checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .checkboxGroup input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #f6c64c; /* Золотистый цвет галочки (поддерживается в современных браузерах) */
+  }
+  
+  .checkboxGroup label {
+    font-size: 0.95rem;
+    color: #4f4f4f;
+    cursor: pointer;
+  }
+  
+  /* Кнопка отправки */
+  .submitBtn {
+    background-color: #d08654; /* Цвет кнопки, близкий к макету */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.8rem 8rem;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    align-self: flex-start; /* выравнивание слева */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+  }
+  
+  /* Hover / Active эффекты на кнопке */
+  .submitBtn:hover {
+    background-color: #b76e3e;
+    transform: translateY(-2px);
+  }
+  
+  .submitBtn:active {
+    transform: translateY(0);
+  }
+  /* ... ваш предыдущий код из ответа выше ... */
+
+/* Блоки для сообщений об ошибке и успехе */
+.errorMessage {
+    background-color: #ffe4e4;
+    color: #c60000;
+    border: 1px solid #ffaaaa;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .successMessage {
+    background-color: #e9ffe6;
+    color: #258f00;
+    border: 1px solid #8aff86;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Анимация плавного появления */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

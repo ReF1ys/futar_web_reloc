@@ -1,0 +1,120 @@
+/* Общий контейнер */
+/* Общий контейнер */
+.container {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Исправленное имя шрифта */
+    background-color: #F5EFE0; /* Светлый бежевый фон */
+    color: #1a2942;
+    min-height: 100vh;
+    width: 100%;
+    }
+  
+  /* Секция с заголовком "About business relocations" */
+  .introSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    text-align: left;
+    
+  }
+  
+  .introSection h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 130%;
+  }
+  
+  .introSection p {
+    padding-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #1a2942;
+    max-width: 800px;
+  }
+  
+  /* Секция с 4 преимуществами */
+  .featuresSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+     /* Расстояние между кругами */
+    }
+
+.featureItem {
+    flex: 0 1 280px; /* Уменьшите ширину */
+    text-align: center;
+    width: 280px; /* Уменьшите ширину */
+    height: 280px; /* Уменьшите высоту */
+    border-radius: 50%; /* Сделайте элемент круглым */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #f0efed 0%, #fff 100%); 
+    box-shadow: 8px 8px 20px 0 rgba(203, 203, 202, 0.9), -8px -8px 16px 0 rgba(255, 255, 255, 0.9), 8px -8px 16px 0 rgba(203, 203, 202, 0.2), -8px 8px 16px 0 rgba(203, 203, 202, 0.2), inset -1px -1px 2px 0 rgba(203, 203, 202, 0.5), inset 1px 1px 2px 0 rgba(255, 255, 255, 0.3);/* Добавьте тень, если необходимо */
+    }
+
+  .iconCircle {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    border-radius: 14px;
+    background-color: #BE754C; /* Цвет круга под иконку */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .featureItem h3 {
+    font-size: 1rem;
+    color: #1A2942;
+    margin-bottom: 0.5rem;
+  }
+  
+  .featureItem p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #1A2942;
+    max-width: 220px;
+  }
+  
+  /* Секция "Why Business Chooses the Middle East" */
+  .whySection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6.8rem 1rem;
+  }
+  
+  .whySection h2 {
+    font-size: 2rem;
+    color: #1A2942;
+    padding-top: 0.5rem;
+  }
+  
+  .whySection p {
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #1a2942;
+  }
+  
+  .whySection ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    padding-left: 0.5rem; /* небольшой отступ, чтобы точки не слипались */
+    color: #1A2942;
+  }
+  
+  .whySection li {
+    margin-bottom: 0.5rem;
+  }
+  
