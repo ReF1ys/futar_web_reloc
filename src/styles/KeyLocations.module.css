@@ -149,7 +149,7 @@
     flex: 1 1 calc(33% - 1rem);
     border-radius: 20px;
     padding: 1.5rem;
-    min-width: 240px;
+    min-width: 160px;
     box-shadow: inset -1px -1px 2px 0 rgba(210, 206, 193, 0.5), inset 1px 1px 2px 0 rgba(255, 255, 255, 0.3), 5px 5px 13px 0 rgba(210, 206, 193, 0.9), -5px -5px 10px 0 rgba(255, 255, 255, 0.9), 5px -5px 10px 0 rgba(210, 206, 193, 0.2), -5px 5px 10px 0 rgba(210, 206, 193, 0.2);
     background: #fdfcf9;
   }
@@ -166,4 +166,28 @@
     color: #4f4f4f;
     line-height: 1.5;
   }
-  
+
+  @media (max-width: 1000px) {
+    .mapWrapper{
+      height: 28rem;
+    }
+    .infoCardBox{
+      padding: 0.75rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .mapWrapper{
+      height: 26rem;
+    }
+    .infoCardBox{
+      padding: 1.5rem;
+      height: 11rem;
+    }
+    .mapImage {
+      height: 100%;
+    }
+    .infoCardBox p {
+      font-size: 0.75rem;
+      width: 190px;
+    }
+  }

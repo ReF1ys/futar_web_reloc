@@ -187,3 +187,13 @@
     margin: 0;
   }
   
+  @media (max-width: 1000px) {
+    .testimonialContent{
+      display: flex;
+      flex-direction: column;
+      width: 32.19rem;
+    }
+    .mainText{
+      width:32rem;
+    }
+  }

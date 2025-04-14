@@ -1,16 +1,14 @@
 /* Общий контейнер */
-/* Общий контейнер */
 .container {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /* Исправленное имя шрифта */
-    background-color: #F5EFE0; /* Светлый бежевый фон */
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5EFE0;
     color: #1a2942;
     min-height: 100vh;
     width: 100%;
     }
   
-  /* Секция с заголовком "About business relocations" */
   .introSection {
     max-width: 1200px;
     margin: 0 auto;
@@ -33,7 +31,6 @@
     max-width: 800px;
   }
   
-  /* Секция с 4 преимуществами */
   .featuresSection {
     max-width: 1200px;
     margin: 0 auto;
@@ -43,15 +40,14 @@
     justify-content: space-around;
     align-items: flex-start;
     gap: 20px;
-     /* Расстояние между кругами */
     }
 
-.featureItem {
-    flex: 0 1 280px; /* Уменьшите ширину */
+  .featureItem {
+    flex: 0 1 280px; 
     text-align: center;
-    width: 280px; /* Уменьшите ширину */
-    height: 280px; /* Уменьшите высоту */
-    border-radius: 50%; /* Сделайте элемент круглым */
+    width: 280px; 
+    height: 280px; 
+    border-radius: 50%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,4 +113,36 @@
   .whySection li {
     margin-bottom: 0.5rem;
   }
-  
+  @media (max-width: 1000px) {
+    .featureItem{
+      flex: 0 1 14.06rem; 
+      text-align: center;
+      width: 14.06rem;
+      height: 14.06rem;
+      padding: 2rem 1.12rem;
+    }
+    .featureItem h3 {
+      font-size: 0.80rem;
+    }
+    
+    .featureItem p {
+      font-size: 0.62rem;
+    }
+    .featuresSection{
+      gap:0;
+    }
+    .whySection{
+      padding-top:6.8rem;
+      padding-bottom: 3rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .featuresSection{
+      gap:20px;
+    }
+
+
+  .featureItem {
+      margin: 0 auto; /* Центрирование каждого блока */
+  }
+  }

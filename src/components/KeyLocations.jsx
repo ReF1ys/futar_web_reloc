@@ -1,8 +1,24 @@
 "use client";
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import styles from "@/styles/KeyLocations.module.css";
 
+// ✅ Хук для получения ширины экрана
+function useScreenSize() {
+  const [width, setWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return width;
+}
+
+// ✅ Данные с адаптивными позициями
 const cityData = [
   {
     id: 'dubai',
@@ -11,8 +27,11 @@ const cityData = [
     description:
       'An international financial centre with developed infrastructure and 0% corporate tax for most businesses',
     link: '#',
-    // Примерные координаты (top/left) для маркера на карте
-    style: { top: '54%', left: '58%' },
+    positions: {
+      desktop: { top: '54%', left: '58%' },
+      tablet: { top: '56%', left: '60%' },
+      mobile: { top: '58%', left: '58%' }
+    }
   },
   {
     id: 'abu-dhabi',
@@ -21,7 +40,11 @@ const cityData = [
     description:
       'The capital of UAE, known for its cultural sites and rapidly growing business landscape',
     link: '#',
-    style: { top: '72%', left: '52%' },
+    positions: {
+      desktop: { top: '72%', left: '52%' },
+      tablet: { top: '74%', left: '54%' },
+      mobile: { top: '72%', left: '52%' }
+    }
   },
   {
     id: 'muscat',
@@ -30,7 +53,11 @@ const cityData = [
     description:
       'A port city with a focus on trade, tourism, and a business-friendly environment',
     link: '#',
-    style: { top: '70%', left: '66%' },
+    positions: {
+      desktop: { top: '70%', left: '66%' },
+      tablet: { top: '72%', left: '68%' },
+      mobile: { top: '70%', left: '66%' }
+    }
   },
   {
     id: 'doha',
@@ -39,7 +66,11 @@ const cityData = [
     description:
       'A rapidly developing city with modern infrastructure and growing investment opportunities',
     link: '#',
-    style: { top: '48%', left: '42.8%' },
+    positions: {
+      desktop: { top: '48%', left: '42.8%' },
+      tablet: { top: '50%', left: '44%' },
+      mobile: { top: '48%', left: '42.8%' }
+    }
   },
   {
     id: 'riyadh',
@@ -48,21 +79,32 @@ const cityData = [
     description:
       'The financial and administrative capital of Saudi Arabia, actively diversifying its economy',
     link: '#',
-    style: { top: '68%', left: '30%' },
-  },
-]
-
-export default function KeyLocations() {
-  const [selectedCity, setSelectedCity] = useState(null)
-
-  const handleCityClick = (city) => {
-    // Если уже выбран тот же город, можно закрыть карточку повторным нажатием
-    if (selectedCity && selectedCity.id === city.id) {
-      setSelectedCity(null)
-    } else {
-      setSelectedCity(city)
+    positions: {
+      desktop: { top: '68%', left: '30%' },
+      tablet: { top: '70%', left: '32%' },
+      mobile: { top: '72%', left: '34%' }
     }
   }
+];
+
+export default function KeyLocations() {
+  const [selectedCity, setSelectedCity] = useState(null);
+  const screenWidth = useScreenSize();
+
+  // ✅ Определяем адаптивные координаты
+  const getResponsivePosition = (positions) => {
+    if (screenWidth <= 768) return positions.mobile;
+    if (screenWidth <= 1000) return positions.tablet;
+    return positions.desktop;
+  };
+
+  const handleCityClick = (city) => {
+    if (selectedCity && selectedCity.id === city.id) {
+      setSelectedCity(null);
+    } else {
+      setSelectedCity(city);
+    }
+  };
 
   return (
     <section className={styles.keyLocationsSection}>
@@ -76,7 +118,6 @@ export default function KeyLocations() {
 
         {/* Карта + метки */}
         <div className={styles.mapWrapper}>
-          {/* Фон карты – можно заменить на свой SVG или PNG */}
           <img
             src="/svg/map.svg"
             alt="Middle East Map"
@@ -88,7 +129,7 @@ export default function KeyLocations() {
             <div
               key={city.id}
               className={styles.marker}
-              style={city.style}
+              style={getResponsivePosition(city.positions)}
               onClick={() => handleCityClick(city)}
             >
               <span>{city.name}</span>
@@ -96,7 +137,7 @@ export default function KeyLocations() {
             </div>
           ))}
 
-          {/* Появляющаяся карточка при клике на город */}
+          {/* Карточка города */}
           <div
             className={`${styles.infoCard} ${
               selectedCity ? styles.infoCardVisible : ''
@@ -115,7 +156,7 @@ export default function KeyLocations() {
           </div>
         </div>
 
-        {/* Блоки с дополнительной информацией внизу */}
+        {/* Дополнительная информация */}
         <div className={styles.cardsRow}>
           <div className={styles.infoCardBox}>
             <h4>Economic zones</h4>
@@ -141,5 +182,5 @@ export default function KeyLocations() {
         </div>
       </div>
     </section>
-  )
+  );
 }

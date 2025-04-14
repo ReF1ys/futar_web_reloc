@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Top Angels",
+  title: "Futar",
   description: "Создай свою бизнес-империю!",
 };
 
