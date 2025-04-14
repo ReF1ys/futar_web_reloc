@@ -71,7 +71,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className={styles.contactSection}>
+    <section id="contact" className={styles.contactSection}>
       <div className={styles.container}>
         {/* Заголовки секции */}
         <h2 className={styles.title}>Contact us</h2>

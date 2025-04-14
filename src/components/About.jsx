@@ -3,7 +3,7 @@ import styles from "@/styles/About.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div id="about" className={styles.container}>
       <Head>
         <title>Business Relocations</title>
         <meta name="description" content="About business relocations in the Middle East" />

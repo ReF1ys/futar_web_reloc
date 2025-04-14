@@ -29,7 +29,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
-        <button className={styles.ctaButton}>
+        <button className={styles.ctaButton} onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
           <span>Let&rsquo;s<br /> Go</span>
         </button>
       </div>

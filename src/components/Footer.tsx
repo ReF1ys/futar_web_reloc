@@ -1,10 +1,17 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -31,19 +38,26 @@ export default function Footer() {
           <h3>Quick Navigation</h3>
           <ul>
             <li>
-              <Link href="#home">Home</Link>
+              <a href="#home" onClick={(e) => handleSmoothScroll(e, "home")}>
+                Home
+              </a>
             </li>
             <li>
-              <Link href="#about">About</Link>
+              <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>
+                About
+              </a>
             </li>
             <li>
-              <Link href="#services">Services</Link>
+              <a href="#reviews" onClick={(e) => handleSmoothScroll(e, "reviews")}>               
+                Reviews
+              </a>
             </li>
             <li>
-              <Link href="#portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link href="#contact">Contact</Link>
+              <a href="#contact" onClick={(e) => handleSmoothScroll(e, "contact")}>
+                Contact
+              </a>
             </li>
           </ul>
         </div>
@@ -95,7 +109,7 @@ export default function Footer() {
       {/* Нижняя часть футера */}
       <div className={styles.bottom}>
         <p>
-          © {new Date().getFullYear()} Your Company. All Rights Reserved.
+          © {new Date().getFullYear()}Future Arcitecture. All Rights Reserved.
         </p>
       </div>
     </footer>
