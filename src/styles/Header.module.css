@@ -1,11 +1,20 @@
 /* Header.module.css */
 .header {/* Фиксированная шапка, остаётся наверху */
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   position: relative;
   z-index: 100;
+  max-width: 1200px; /* Ограничение ширины */
+}
+.navContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem; /* расстояние между ссылками и кнопкой */
+  margin: 0 auto; /* центрирование блока */
 }
 
 .logo {
@@ -91,6 +100,14 @@
   margin-top: 1rem;
   width: 100%; /* Кнопка занимает всю ширину */
 }
+.navOpen {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.desktopOnly{
+  display: none;
+}
 
 /* Media queries для адаптивности */
 @media (max-width: 768px) {
@@ -135,7 +152,9 @@
   }
 
   .startButton {
+    display: none;
     margin-top: 1rem;
     width: 100%;
   }
+
 }
