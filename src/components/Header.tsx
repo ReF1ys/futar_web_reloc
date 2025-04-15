@@ -23,19 +23,19 @@ export default function Header() {
         <span className={isMenuOpen ? styles.burgerLineOpen : styles.burgerLine}></span>
         <span className={isMenuOpen ? styles.burgerLineOpen : styles.burgerLine}></span>
       </div>
-      <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ""}`}>
-        <li onClick={(e) => handleSmoothScroll(e, "home")}>Home</li>
-        <li onClick={(e) => handleSmoothScroll(e, "contact")}>Contact</li>
-        <li onClick={(e) => handleSmoothScroll(e, "about")}>About</li>
-        <li>
-          <button
-            className={styles.startButton}
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Start Your Relocation
-          </button>
-        </li>
-      </ul>
+      <nav className={styles.navContainer}>
+        <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksOpen : ""}`}>
+          <li onClick={(e) => handleSmoothScroll(e, "home")}>Home</li>
+          <li onClick={(e) => handleSmoothScroll(e, "contact")}>Contact</li>
+          <li onClick={(e) => handleSmoothScroll(e, "about")}>About</li>
+        </ul>
+        <button
+          className={styles.startButton}
+          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+        >
+          Start Your Relocation
+        </button>
+      </nav>
     </header>
   );
 }
