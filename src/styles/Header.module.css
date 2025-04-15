@@ -14,6 +14,18 @@
   letter-spacing: 1px;
   color: #fff;
 }
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+.burgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 .navLinks {
   list-style: none;
@@ -95,11 +107,35 @@
   .navLinks {
     gap: 1rem;
   }
+  .navContainer {
+    display: none;
+  }
   .logo {
     font-size: 1.3rem;
   }
   .startButton {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
+  }
+  .navLinksOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1a1a1a;
+    width: 100%;
+    padding: 1rem;
+    z-index: 99;
+  }
+
+  .navLinksOpen li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .startButton {
+    margin-top: 1rem;
+    width: 100%;
   }
 }
