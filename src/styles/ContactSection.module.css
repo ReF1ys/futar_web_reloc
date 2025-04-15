@@ -192,4 +192,33 @@
       transform: translateY(0);
     }
   }
+  @media (max-width: 360px) {
+    .title{
+      font-size: 1.5rem;
+    }
+    .subtitle{
+      font-size: 0.8rem;
+    }
+    .formTitle{
+      font-size: 1.5rem;
+    }
+    .requestForm {
+      display: flex; /* Используем Flexbox */
+      flex-direction: column; /* Располагаем элементы в столбик */
+      gap: 1rem; /* Добавляем расстояние между элементами */
+    }
   
+    .formRow {
+      display: flex; /* Убираем сетку */
+      flex-direction: column; /* Располагаем элементы в столбик */
+      gap: 1rem; /* Расстояние между элементами */
+      }
+  
+    .formGroup,
+    .formGroupWide {
+      width: 100%; /* Элементы занимают всю ширину */
+    }
+    .submitBtn{
+      padding: 0.8rem 4.88rem; /* Уменьшаем ширину кнопки */
+    }
+  }

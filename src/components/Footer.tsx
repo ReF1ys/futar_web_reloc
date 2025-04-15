@@ -20,15 +20,8 @@ export default function Footer() {
           <h3>Contact Us</h3>
           <ul>
             <li>
-              <span>Phone:</span>{" "}
-              <a href="tel:+123456789">+1 234 567 89</a>
-            </li>
-            <li>
               <span>Email:</span>{" "}
-              <a href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li>
-              <span>Address:</span> 123 Tech Avenue, Innovation City
+              <a href="mailto:info@example.com">infoab@example.com</a>
             </li>
           </ul>
         </div>
@@ -45,11 +38,6 @@ export default function Footer() {
             <li>
               <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>
                 About
-              </a>
-            </li>
-            <li>
-              <a href="#reviews" onClick={(e) => handleSmoothScroll(e, "reviews")}>               
-                Reviews
               </a>
             </li>
             <li>

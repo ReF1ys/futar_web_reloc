@@ -25,6 +25,7 @@
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease;
 }
 
 .navLinks li {
@@ -51,9 +52,42 @@
   background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
 }
+.navLinks {
+  display: flex;
+}
+
+.navLinksOpen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1a1a1a;
+  width: 100%;
+  padding: 1rem;
+  transform: translateY(0);
+  z-index: 99;
+}
+
+.navLinksOpen li {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.navLinksOpen .startButton {
+  margin-top: 1rem;
+  width: 100%; /* Кнопка занимает всю ширину */
+}
 
 /* Media queries для адаптивности */
 @media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
   .header {
     padding: 0.5rem 4%;
   }

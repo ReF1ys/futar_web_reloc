@@ -30,7 +30,7 @@ const cityData = [
     positions: {
       desktop: { top: '54%', left: '58%' },
       tablet: { top: '56%', left: '60%' },
-      mobile: { top: '58%', left: '58%' }
+      mobile: { top: '72%', left: '82%' }
     }
   },
   {
@@ -43,7 +43,7 @@ const cityData = [
     positions: {
       desktop: { top: '72%', left: '52%' },
       tablet: { top: '74%', left: '54%' },
-      mobile: { top: '72%', left: '52%' }
+      mobile: { top: '82%', left: '72%' }
     }
   },
   {
@@ -56,7 +56,7 @@ const cityData = [
     positions: {
       desktop: { top: '70%', left: '66%' },
       tablet: { top: '72%', left: '68%' },
-      mobile: { top: '70%', left: '66%' }
+      mobile: { top: '90%', left: '88%' }
     }
   },
   {
@@ -69,7 +69,7 @@ const cityData = [
     positions: {
       desktop: { top: '48%', left: '42.8%' },
       tablet: { top: '50%', left: '44%' },
-      mobile: { top: '48%', left: '42.8%' }
+      mobile: { top: '70%', left: '61%' }
     }
   },
   {

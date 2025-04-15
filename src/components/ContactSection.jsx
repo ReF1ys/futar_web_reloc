@@ -77,7 +77,7 @@ export default function ContactSection() {
         <h2 className={styles.title}>Contact us</h2>
         <p className={styles.subtitle}>
           Get a free consultation on relocating your business to the Middle East
-          <br/>and learn about special conditions
+          and learn about special conditions
         </p>
 
         {/* Обёртка с формой */}

@@ -147,4 +147,29 @@
     content: '↓'; 
     font-size: 2.2rem;
 }
+}@media (max-width: 360px) {
+  .title {
+    font-size: 2rem;
+  }
+  .ctaButton{
+    margin: 0px;
+  }
+  .subtitle {
+    font-size: 0.6rem;
+  }
+  .contprev {
+    padding-top: 1rem;
+    gap: 20px;
+    font-size: 0.46rem;
+    color: #d9ab91;
+  }
+  .prev{
+    font-size: 0.46rem;
+  }
+  .prevText{
+    font-size: 0.46rem;
+  }
+  .ctaButton {
+    transform: translateY(4rem);
+  }
 }

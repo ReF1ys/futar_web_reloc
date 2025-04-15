@@ -191,3 +191,15 @@
       width: 190px;
     }
   }
+  @media (max-width: 360px) {
+    .title {
+      font-size: 1.4rem;
+    }
+    .subtitle {
+      font-size: 0.8rem;
+    }
+    .mapImage {
+      height: 140%;
+      width: 100%;
+    }
+  }

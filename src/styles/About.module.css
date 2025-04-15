@@ -106,7 +106,7 @@
   .whySection ul {
     list-style: disc;
     margin-left: 1.5rem;
-    padding-left: 0.5rem; /* небольшой отступ, чтобы точки не слипались */
+    padding-left: 0.5rem;
     color: #1A2942;
   }
   
@@ -140,9 +140,28 @@
     .featuresSection{
       gap:20px;
     }
-
-
-  .featureItem {
+    .featureItem {
       margin: 0 auto; /* Центрирование каждого блока */
   }
+  }
+  @media (max-width: 360px) {
+    .introSection h1 {
+      font-size: 1.4rem;
+    }
+    .introSection p {
+      font-size: 0.8rem;
+    }
+    .featuresSection{
+      padding-top: 0;
+    }
+    .whySection h2 {
+      font-size: 1.4rem;
+    }
+    .whySection p {
+      font-size: 0.8rem;
+    }
+    
+    .whySection ul {
+      padding-left: 0.5rem;
+    }
   }
